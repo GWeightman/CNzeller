@@ -17,7 +17,7 @@ const dayOfWeek = (X) => {
     else if(X == 6){
         console.log("Saturday")
     }
-    else if(X == 7){
+    else if(X == 0){
         console.log("Sunday")
     }
     else{
@@ -44,4 +44,4 @@ const zeller = (D, M, Y) =>{
     }
 }
 
-zeller (20, 3, 1984)
+zeller (7, 11, 2021)
