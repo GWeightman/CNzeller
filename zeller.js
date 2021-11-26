@@ -1,8 +1,3 @@
-let D = 20
-let M = 3
-let Y = 1984
-
-
 const dayOfWeek = (X) => {
     if(X == 1){
         console.log("Monday")
@@ -30,20 +25,23 @@ const dayOfWeek = (X) => {
     }
 }
 
-if (M < 3) {
-    M = M+12
-    Y = Y-1
-    let F = parseInt(Y/100)
-    let L = Y-100*F
-    let S = parseInt((2.6*M)-5.39) + parseInt(L/4) + parseInt(F/4) + D + L - (2*F)
-    let X = S-(7*parseInt(S/7))
-    dayOfWeek(X)
-}
-else{
-    let F = parseInt(Y/100)
-    let L = Y-100*F
-    let S = parseInt((2.6*M)-5.39) + parseInt(L/4) + parseInt(F/4) + D + L - (2*F)
-    let X = S-(7*parseInt(S/7))
-    dayOfWeek (X)
+const zeller = (D, M, Y) =>{
+    if (M < 3) {
+        M = M+12
+        Y = Y-1
+        let F = parseInt(Y/100)
+        let L = Y-100*F
+        let S = parseInt((2.6*M)-5.39) + parseInt(L/4) + parseInt(F/4) + D + L - (2*F)
+        let X = S-(7*parseInt(S/7))
+        dayOfWeek(X)
+    }
+    else{
+        let F = parseInt(Y/100)
+        let L = Y-100*F
+        let S = parseInt((2.6*M)-5.39) + parseInt(L/4) + parseInt(F/4) + D + L - (2*F)
+        let X = S-(7*parseInt(S/7))
+        dayOfWeek (X)
+    }
 }
 
+zeller (20, 3, 1984)
