@@ -1,0 +1,24 @@
+{
+  "name": "zeller",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "zeller.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GWeightman/zeller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GWeightman/zeller/issues"
+  },
+  "homepage": "https://github.com/GWeightman/zeller#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}

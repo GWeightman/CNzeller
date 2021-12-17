@@ -1,31 +1,50 @@
+import inquirer from "inquirer"
+
+let dates = [
+    {
+        type: "number",
+        name: "day",
+        message: "Enter the day you were born"
+    },
+    {
+        type: "number",
+        name: "month",
+        message: "Enter the month you were born"
+    },
+    {
+        type: "number",
+        name: "year",
+        message: "Enter the year you were born"
+    }
+]
 const dayOfWeek = (X) => {
     if(X == 1){
-        console.log("Monday")
+        console.log("You were born on a Monday")
     }
     else if(X == 2){
-        console.log("Tuesday")
+        console.log("You were born on a Tuesday")
     }
     else if(X == 3){
-        console.log("Wednesday")
+        console.log("You were born on a Wednesday")
     }
     else if(X == 4){
-        console.log("Thursday")
+        console.log("You were born on a Thursday")
     }
     else if(X == 5){
-        console.log("Friday")
+        console.log("You were born on a Friday")
     }
     else if(X == 6){
-        console.log("Saturday")
+        console.log("You were born on a Saturday")
     }
     else if(X == 0){
-        console.log("Sunday")
+        console.log("You were born on a Sunday")
     }
     else{
         console.log("Outside of Time and Space")
     }
 }
 
-const zeller = (D, M, Y) =>{
+const step1 = (D, M, Y) =>{
     if (M < 3) {
         M = M+12
         Y = Y-1
@@ -43,5 +62,9 @@ const zeller = (D, M, Y) =>{
         dayOfWeek (X)
     }
 }
+const zeller = async() => {
+    let response = await inquirer.prompt(dates)
+    step1(response.day, response.month, response.year)
+}
 
-zeller (7, 11, 2021)
+zeller ()
